@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        h1 {
+            text-transform: uppercase;
+            /*burada h1ler büyük harfle yazılması sağlanıyor */
+            letter-spacing: 5px;
+            /*harflerin aralığını 5px yaptık.*/
+
+        }
+
+        /*class selector NOKTA KOYARSAN BAŞINA CLASS DEMEKTİR*/
+        .favori {
+            border-left: 10px #007AFF;
+        }
+
+        /*id*/
+        #memleket {
+            text-align: center;
+        }
+
+
+
+        #memleket::after {
+            content: "(OTOPARK)";
+            font-weight: bold;
+        }
+
+        /* divin doğrudan çocukları(immediate child*/
+        div>p {
+            margin: 0 70px;
+            text-align: justify;
+            font-size: 80%;
+        }
+
+        /*DİV BOŞLUK P YAZARSAN divin  torunlarını da etkiler*/
+        div p {
+            font-family: "Comic Sans MS";
+        }
+
+        h1,
+        h2 {
+            background-color: black;
+            color: white;
+        }
+
+        /*attribute selector*/
+        [title]
+        {
+
+            background-color: yellow;
+            
+        }
+        li[title]
+        {
+            font-style:italic;;
+        }
+       /*h2'den sonra gelen plerde geçerli demek h2+pile yapabiliriz.*/
+        h2+ p{
+            text-align: 40px;
+        }
+        li:nth-child(odd){
+
+            /*teklere odd yada 2n+1 yazarsak parantez içine tekleri seçer */
+            background-color: gainsboro;
+        }
+        li:nth-child(6)
+        {
+            text-transform: uppercase   ;
+            font-weight: bold;
+            text-align: center;
+            font-style: italic;
+            font-family: arial;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px red;
+            color:cyan;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Türkiye</h1>
+    <h2>Kütahya</h2>
+    <p>Kuruluş tarihi kesin olarak tespit edilememekle beraber, tarihi MÖ 3000 yıllarına uzanmaktadır. Eski kaynaklara
+        göre, Kütahya'nın antik çağlardaki adı Kotiaeon, Cotiaeum ve Koti şeklinde geçmektedir. İl topraklarına yerleşen
+        en eski halk Friglerdir. MÖ 1200'lerde Anadolu'ya gelen Frigler, Hitit İmparatorluğunun topraklarına girdiler ve
+        bir devlet olarak örgütlendiler. MÖ 676'da Kimmerler, Frigya Kralı III. Midas'ı bozguna uğratarak Kütahya ve
+        çevresine egemen oldular.
+    </p>
+    <p> Alyattes'in Lidya Kralı olduğu dönemde Kimmer egemenliği yerini Lidya yönetimi aldı. MÖ 546'da Persler Lidya
+        Ordusunun yenilgiye uğratarak Anadolu'yu istila etti. MÖ 334'te Biga Çayı yakınlarında Persleri yenilgiye
+        uğratan İskender, yörede üstünlük kurdu. Büyük İskender'in MÖ 323'te ölümü ile Kütahya ve yöresi komutanlarından
+        Antigonos'a geçti. MÖ 133'te Roma yönetimine girdi. Piskoposluk merkezi haline getirildi.</p>
+    <!--div başlangıçtaherhangibir css si olmayan kutudur-->
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa sunt animi odio quo consectetur
+            architecto tenetur aut. Corporis fugiat consequatur sequi totam, qui repellat magni ex architecto excepturi
+            veritatis!
+        </p>
+        <section>
+            <p>bu satırı immediate child etkilemez.
+        Kütahya <span title="beyaz bir kil gövdenin yüksek sıcaklıklarla pişirilmesi ile yapılan bir seramil türüdür.">porselen</span> sunar.
+            </p>
+        </section>
+    </div>
+
+    <h3>İlçeleri</h3>
+    <ul>
+        <li>merkez</li>
+        <li>altıntaş</li>
+        <li>aslanapa</li>
+        <li  title="Dikkat antik kent içerir.">çavdarhisar</li>
+        <li class="favori">domaniç</li>
+        <li>dumlupınar</li>
+        <li class="favori">emet</li>
+        <li>gediz</li>
+        <li>hisarcık</li>
+        <li>pazarlar</li>
+        <li>simav</li>
+        <li>şaphane</li>
+        <li id="memleket" class="favori">tavşanlı</li>
+    </ul>
+
+</body>
+
+</html>
