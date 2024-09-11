@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+p{
+line-height: 1.5; /*satırlar arası boşluğu 1.5 katına çıkarmış olduk*/
+letter-spacing: 2px;
+word-spacing: 6px;
+text-align: justify;
+text-indent: 20px;/*paragraf başındaki bırakılan boşluk*/
+/*            x  y  blur color*/
+text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.5); /*metnin gölgesini yapıyoruz*/
+}
+p:nth-child(1) /*ilk paragraf demek*/
+{
+text-decoration: underline line-through over line-through;
+text-transform: uppercase;
+
+}
+p:nth-child(2)
+{
+    text-decoration: line-through;
+}
+
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias est earum eaque optio, vero placeat ut at dignissimos debitis ducimus iure voluptatem aliquam commodi provident exercitationem sunt quibusdam ad atque!</p>
+    <p>Ea nihil tenetur rem amet quam delectus saepe ducimus cumque sed ex pariatur fugiat assumenda ullam, vel similique laudantium magni reprehenderit atque quibusdam dicta voluptates. Asperiores delectus dolore repudiandae ipsa.</p>
+    <p>Exercitationem fugit facilis est, expedita magni ipsa minus illum similique, molestiae eligendi suscipit. Repudiandae dolores cupiditate, amet atque ducimus dicta maxime doloremque adipisci, delectus id iure in dolor obcaecati voluptatum?</p>
+    <p>Ex quia placeat veniam, dolorum ipsum laboriosam doloremque nostrum quos maxime voluptatem voluptate sit vel magnam modi est velit unde. Atque sunt eveniet consequatur unde, cumque accusantium officiis similique perferendis!</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sözde Element</title>
+    <style>
+        body{ /*body verilen değer miras kabul edilir */
+
+            font-size: 24px;
+        }
+        p{
+            text-align: justify;
+
+
+        }
+        p::first-line{
+text-decoration: underline;
+        }
+        p::first-letter{
+font-size: 3em;
+float: left;
+line-height: .75; /*satır yüksekliği*/
+font-weight: bold;
+
+        }
+        p::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+
+main{
+    background-color: rgb(216, 216, 169);
+    max-width: 600px;
+    /*ilki x ekseni ikincisi y ekseni*/
+    margin: 40px auto 20px;
+    padding: 36px;
+    background-image: linear-gradient(180deg,#A9C9FF 0%,#FFBBEC 100%);
+    border-radius: 10px;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background: #fffef0;
+}
+@media(max-width: 720px)
+     main{
+    margin: 40px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi incidunt non consectetur assumenda modi corporis accusamus dolorum distinctio harum quas quaerat unde delectus impedit dolores temporibus aperiam, et itaque consequuntur.</p>
+        <p>In dolores dolore fugit similique dignissimos laudantium omnis corrupti, sint iusto quasi. Incidunt quasi quisquam dolorem quos expedita. Nobis provident quam optio dignissimos eius incidunt perferendis quod veritatis molestias dolor?</p>
+        <p>Possimus, est officiis earum eaque alias repellat libero blanditiis, iusto doloremque perspiciatis consequuntur quo commodi veritatis officia nihil ipsam, quia doloribus. Fugit repudiandae perspiciatis reprehenderit adipisci distinctio autem at ullam!</p>
+        <p>Praesentium aut minima voluptas blanditiis? Sapiente iste iure error quia consectetur quod? Reprehenderit dignissimos officia in odit dicta, distinctio cupiditate facilis porro ea, animi dolorum exercitationem, ab aspernatur vitae nemo.</p>
+    </main>
+</body>
+</html>
