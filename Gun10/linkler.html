@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkler</title>
+    <style>
+.link2{
+    text-decoration: none;
+
+}
+.link3{
+    color: red;
+    text-decoration: none;
+}
+.link4:hover{
+color:white ;
+background-color: orange;
+
+}
+.link5:active{ /*sözde sınıv : tek iki nokta burada tıklayınca olacak olayları yapıyorız*/
+
+    outline: 3px solid red; /*tıklayınca diğerlerini kaktımaması için outline yaptık border yazmadık border kaktırır*/
+    background: blue;
+    color: white;
+    text-decoration: none;
+}
+.link6{
+display: inline-block;  /*bu yeni bir özellik satırda hizalama ve yana yana sıralamda inline özellikli gibi davranır diğeer şeylerde blok element olarak devam eder*/
+    text-decoration: none;
+    background: #4F75FF;
+    color: white;
+    padding: 32px;
+    border-radius: 4px;/*köşelere ovallik veriyoruz*/
+
+}
+.link6:hover{
+    background: pink;
+}
+.link6:active{
+    -webkit-background-origin: blue
+    ;
+}
+.link6:focus{
+    outline : 3px solid #4f75ff7d;
+    outline-offset: 0;
+}
+.link7{
+    background-color: coral;
+    color: white;
+    padding: .5rem 1rem;
+font-weight: 600;
+text-decoration: none;
+    transition: all .5s;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px rgba(255,0,255,0.5);
+    display: inline-block;
+}
+.link7:hover{
+
+    background-color: magenta;
+
+}
+.link7:active{
+    background-color: palevioletred;
+    transform: scale(.95) rotate(360deg);/*inline bloklarda bazı transform özellikleri çalışmıyo scale etliye sütliye karışmadan yandakilere zaarrar vermeden büyütür.*/
+}
+
+    </style>
+</head>
+
+<body>
+    <a href=""></a> <!-- eğer içini boş bırakırsak sayfa yenilenir eğer / koyarsam köke gider ../ yaparsan bir üst klasore gider-->
+
+    <a href="#" class="link1">link1</a>
+    <a href="#" class="link2">link2</a>
+    <a href="#" class="link3">link3</a>
+    <a href="#" class="link4">link4</a>
+    <a href="#" class="link5">link5</a>
+    <a href="#" class="link6">link6</a>
+    <a href="#" class="link7">link7</a>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iure perspiciatis voluptatibus quibusdam neque? Doloribus molestiae expedita quibusdam pariatur, voluptas dicta consequatur eos in blanditiis nam, nostrum eaque libero ducimus tempora labore, debitis sint earum vero? Eius illum voluptatem similique facere magnam molestias ratione dignissimos sapiente id accusamus. Adipisci, iusto modi sed voluptatem alias temporibus molestiae quis deleniti, ullam laborum perspiciatis. Omnis eaque voluptate iste non autem? Enim facilis culpa harum molestiae nesciunt suscipit ducimus eaque voluptas adipisci corrupti ad neque veniam deleniti, blanditiis modi quae consequuntur explicabo consectetur est, exercitationem molestias! Error dolores sint aliquam ex eveniet nobis cumque.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ıd ve class arasında fark
+      ID (Kimlik Numarası):
+
+ • Gerçek Hayat Örneği: Bir kişinin kimlik numarası gibi düşünebilirsin. Her bireyin benzersiz bir kimlik numarası vardır ve bu numara sadece o kişiye aittir. Aynı kimlik numarasını bir başkası kullanamaz.
+ Class (Sınıf):
+Gerçek Hayat Örneği: Aynı sınıfa ait birçok kişi olabilir. Örneğin, bir okulda “10A” sınıfında birden fazla öğrenci vardır, ama hepsi “10A” sınıfına aittir.-->
+
+    
+</body>
+</html>
