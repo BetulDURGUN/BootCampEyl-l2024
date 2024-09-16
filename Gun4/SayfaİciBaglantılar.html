@@ -8,18 +8,22 @@
 <body>
     <h1>Siteme Hoşgeldiniz.</h1>
     <h2 id="İçindekiler">Sitemin İçeriği</h2>
+      <!-- ul>li*4 -->
+    <!-- # bağlantının nereye gideceğine karar vericez -->
     <ul>
         <li><a href="#Hakkımda">Hakkımda</a></li>
         <li><a href="#Hobilerim">Hobilerim</a></li>
         <li><a href="#Projelerim">Projelerim</a></li>
         <li><a href="#İletişim">İletişim</a></li>
     </ul>
-
+<!-- id verince linklere tıkladığımızda sayfayı oraya kaydırıyor -->
     <h2 id="Hakkımda">Hakkımda</h2>
+     <!-- p*2>lorem60 -->
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet unde placeat molestias quae expedita? Quod fugiat dolore voluptates sed similique consectetur ratione quibusdam optio, quidem sapiente corporis incidunt sit nam aliquam quis animi dolorum asperiores provident facere nemo natus voluptate praesentium consequuntur? Velit, possimus, cumque consequuntur porro laborum earum numquam ex magni ad odit nulla. Reprehenderit iure a omnis corrupti.</p>
 <p>Deserunt maiores tempora magni doloribus consectetur inventore quas accusantium fugit. Quae ex magni, blanditiis voluptatum sint neque necessitatibus ea facere cum corporis atque illo architecto vitae praesentium, fuga aperiam excepturi quod inventore ad sapiente totam quo impedit accusantium rem? Perferendis, obcaecati eum. Iusto aut unde libero esse assumenda dicta blanditiis velit, aspernatur odio est molestiae quis dolorem. Officia, dolorum quia.</p>
 
     <h2 id="Hobilerim">Hobilerim</h2>
+    <!-- ul>li*12>lorem2 -->
 <ul>
     <li>Lorem, ipsum.</li>
     <li>Perspiciatis, minima!</li>
@@ -45,7 +49,9 @@
 
 <h2 id="İletişim">İletişim</h2>
 <!-- formlarda action kısmına formun teslim edileceği adresi girilir. Şimdilik sunucu taraflı çalışmadığımız için (yalandan)boş geçmek adına sayfa içi bir link verilmiştir. -->
+ <!-- formlarda action kısmına formun teslim edileceği sayfanın adresi girilir. Şimdilik sunucu taraflı çalışmadığımız için yalandan bir link verilmiştir. -->
 <form action="gönder.html" method="post">
+    <!-- method özelliği post olarak ayarlanırsa çekilen veri adres çubuğunda açıkça görünmez. get olursa url üzerinde görünür -->
 <label for="gönderici">Adınız</label> <br>
 <input id="gönderici" type="text" name="ad"> 
  <br>
@@ -55,7 +61,7 @@
 <br><br><br>
 
 <button>Gönder</button>
-<hr>
+<hr> <!-- horizontal -->
 Her hakkı saklıdır. &copy:2024
 </form>
 

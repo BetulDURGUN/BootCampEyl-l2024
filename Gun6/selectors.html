@@ -19,26 +19,27 @@
             border-left: 10px #007AFF;
         }
 
-        /*id*/
+        /*id*/   /* id. idleri yazarken başına # koyuyoruz. classlarda . nokta koyuyoruz */
         #memleket {
             text-align: center;
         }
 
 
-
+/* kelimenin sonuna gelmesi için after yazdık. after sözde elementtir. */
         #memleket::after {
             content: "(OTOPARK)";
             font-weight: bold;
         }
 
-        /* divin doğrudan çocukları(immediate child*/
+        /* divin doğrudan çocukları(immediate child child selector */
         div>p {
             margin: 0 70px;
-            text-align: justify;
+            text-align: justify;   /* sağa sola eşit olacak şekilde yasladık */
             font-size: 80%;
         }
 
         /*DİV BOŞLUK P YAZARSAN divin  torunlarını da etkiler*/
+         /* div ile p arasına boşluk koyunca tek bir p'yi değil div'in torunları olan p'leri de etkiliyor.*/
         div p {
             font-family: "Comic Sans MS";
         }
@@ -49,7 +50,7 @@
             color: white;
         }
 
-        /*attribute selector*/
+        /*attribute selector  tüm title attributelarını etkiler  */
         [title]
         {
 
@@ -57,18 +58,23 @@
             
         }
         li[title]
+         /* sadece title attribute'u içeren li ögelerine etki eder */
         {
             font-style:italic;;
         }
        /*h2'den sonra gelen plerde geçerli demek h2+pile yapabiliriz.*/
         h2+ p{
-            text-align: 40px;
+            text-indent: 40px;
+             /* bu özellik paragrafın içeri girdi yapmasını sağlar. h2+p ile de iki p'yi değil sadece h2den sonra gelen p'yi etkiledik */
         }
+
+        /* nth child, ...ıncı ögeleri seçer. odd tek anlamına gelir tek sayıda ilerler. odd ya da 2n+1 ile tek sayıları seçtirebiliriz.*/
         li:nth-child(odd){
 
             /*teklere odd yada 2n+1 yazarsak parantez içine tekleri seçer */
             background-color: gainsboro;
         }
+        /* 6. çocuk nasıl seçilir */
         li:nth-child(6)
         {
             text-transform: uppercase   ;
@@ -105,12 +111,14 @@
             veritatis!
         </p>
         <section>
+
             <p>bu satırı immediate child etkilemez.
         Kütahya <span title="beyaz bir kil gövdenin yüksek sıcaklıklarla pişirilmesi ile yapılan bir seramil türüdür.">porselen</span> sunar.
             </p>
+            <!-- sadece porselenin üstüne gelince title çıkması için span ile porseleni çevreledik. span olmayınca p'ye konan title tüm paragrafı etkiliyor -->
         </section>
     </div>
-
+<!-- class birden fazla elemana verilebilir, id tek elemana özel. -->
     <h3>İlçeleri</h3>
     <ul>
         <li>merkez</li>

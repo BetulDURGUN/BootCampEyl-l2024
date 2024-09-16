@@ -17,8 +17,8 @@
         p::first-line{
 text-decoration: underline;
         }
-        p::first-letter{
-font-size: 3em;
+        p::first-letter{ /* her paragrafın ilk harfine */
+font-size: 3em;/* 3em = 300% yani  em normal demek 3em ise normalin 3katı  */
 float: left;
 line-height: .75; /*satır yüksekliği*/
 font-weight: bold;
@@ -34,18 +34,21 @@ font-weight: bold;
             max-width: 600px;
             /*      top   x   bottom   */
             margin: 60px auto 20px;
+             /* 0 y ekseni auto x ekseni */
+      /* aouto margin ortada tutuyor */
             background-color: #A9C9FF;
             background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
             padding: 36px;
             border-radius: 10px;
             box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+            /* sadece üst kısmın gölgesini içeri verdim */
         }
 
         @media (max-width: 720px) {
-            main {
-                margin: 40px
-            }
-
+      main {
+        margin: 40px;
+      }
+    }
 
     </style>
 </head>
@@ -56,5 +59,5 @@ font-weight: bold;
         <p>Possimus, est officiis earum eaque alias repellat libero blanditiis, iusto doloremque perspiciatis consequuntur quo commodi veritatis officia nihil ipsam, quia doloribus. Fugit repudiandae perspiciatis reprehenderit adipisci distinctio autem at ullam!</p>
         <p>Praesentium aut minima voluptas blanditiis? Sapiente iste iure error quia consectetur quod? Reprehenderit dignissimos officia in odit dicta, distinctio cupiditate facilis porro ea, animi dolorum exercitationem, ab aspernatur vitae nemo.</p>
     </main>
-</body>
+  </body>
 </html>

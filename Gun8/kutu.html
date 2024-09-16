@@ -27,6 +27,10 @@ float: left;
 outline: 8px solid rgb(0, 42, 255);
 outline-offset: 5px;
 
+ /* kutular solda askıda kalarak yan yana geldi ama bunun dezavantajı borderın içinde durmuyorlar. borderın yüksekliği sıfır gibi göründü */
+ 
+ /* outline'ın hacmi yoktur, border gibi bir yüksekliği yoktur hesaplamaya dahil değildir ve border gibi diğer ögeleri itmez. */
+
 }
 main{
     border: 10px solid red;
@@ -34,7 +38,11 @@ main{
 
     </style>
 </head>
-<>
+<body>
+<!-- div block element olduğu için kutular her satırda birer tane olacak şekilde yerleşti -->
+
+
+  <!-- block elementleri block olmayan bi element içine aldık -->
     <!--problem!! 
     main kutusunun kenarlığı içindeki her şeyi çevrelemesi gerekirken neden şuan çerçevelemiyor, bunu float konusunda işleyeceğiz.-->
     <main>

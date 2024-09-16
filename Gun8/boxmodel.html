@@ -11,10 +11,12 @@
        
     }*/
 *{
-    box-sizing: border-box;
+    box-sizing: border-box;/* sayfadaki tüm elementleri etkiler */
 }
 /*classs olunca başında nokta ile işaretliyoruz.*/
 .kutu1{
+   /* buraya box sizing border box eklediğimizde toplam element height kadar olur ve eklenen padding border değerleri içeriğe ayrılan alandan çalınır. yani artık içerik alanının yüksekliği değil her şey dahil toplam yükseklik heighta eşit */
+
  box-sizing: border-box; /*bütün blok elementlerde bu önemli bir özellik yüksekliği sabitliyo*/
 background-color: yellow;
 border: 10px solid green;
@@ -32,6 +34,7 @@ margin-top: 25px;
 
 </style>
 <body>
+      <!-- h1 ve p gibi elementlerin default bi padding değeri olur. header elementinde yok -->
     <header>HEADER HEADER HEADER</header>
     <div class="kutu1">abcğ</div>
 </body>
