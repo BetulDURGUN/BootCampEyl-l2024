@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    buyrun..
+    <hr>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+        /* Dört çeşit fonksiyonu örenekleyelim
+        1.PARAMETRE ALMAYAN DEĞER DÖNDÜRMEYEN
+        2.PARAMETRE ALMAYAN DEĞER DÖNDÜREN
+        3.PARAMETRE ALAN DEĞER DÖNDÜRMEYEN
+        4.PARAMETRE ALAN DEĞER DÖNDÜREN
+
+         */
+
+//parametre almayan geri değer döndürmeyen
+function ekranaTarihiVeSaatiYazdir()
+{
+let suAn=new Date();
+ciz(suAn.toLocaleString("tr"));
+}
+ekranaTarihiVeSaatiYazdir();
+
+//parametre almayan ama değer döndüren
+function ayinGunu(){
+    let suAn=new Date();
+    return suAn.getDate();
+}
+
+let kacinci =ayinGunu();
+ciz("Bugün ayın "+ kacinci +".günüdür.")
+//ilk önce ilk gun yazısına tıkla sonra alt tuşuna ve ikinci değişilik yapmak istediğin gun yazısına tıkla  ardından yanıp sönen bir şey olacak ozaman birini değişince diğeri de değişecek
+
+//parametre alan değer döndürmeyen 
+//işçi fonksiyon:aldığı renk koduyla aarka planı boyar.
+
+function arkaPlaniBoya(renk)
+{
+document.body.style.background=renk;
+}
+
+//aldıgı sayının bir fazlasını döndürür
+//matematiksel "f(x)=x+1"gibi parametre alan ve değer döndüren
+
+arkaPlaniBoya("linear-gradient(to right, #ccc, #333)");
+
+
+//
+
+function birFazlasi(x){
+return x + 1; //fonksiyonun gövdesidir burası
+
+}
+
+let sayi = 3;
+sayı=birFazlasi(sayi);
+ciz(sayi);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .kutu1{background-color: yellow;}
+.kutu2{background-color: blue;}
+.kutu3{background-color: pink;}
+.konteynir{border:10px dashed black; 
+    height: 300px;
+display: flex;/*çocukları esnek yerleşecek*/
+flex-direction: row-reverse;/*yerleşim yönünü belirtir*/
+justify-content: space-evenly;/* başta ftoplamak sonda toplamak flex-end, ortada topla , aramıza mesafe koyalım space between,kendi etraflarına mesafa space around,diziliş yönüne göre dağılım*/
+align-items: flex-start;/*en sona toplamak flex-end ,  ortaya ortalamak hizalamak center aşağı kadar esnetmek :stretch , baseline*/
+/*justify-content yatayda, align-items dikeyde "konumlandırır"*/
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="konteynir">
+        <div class="kutu1">Lorem ipsum dolor sit amet.</div>
+        <div class="kutu2">Ut vero quisquam sed sit.</div>
+        <div class="kutu3">Rerum unde doloribus quia voluptatum!</div>
+    </div>
+</body>
+</html>

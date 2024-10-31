@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatörler</title>
+
+</head>
+
+<body>
+
+    <script src="../ortak/yaz.js"></script> <!--göreceli yol bulunduğu yerden üst dizine çık demek istiyo .. ile-->
+
+    <script>
+        //operatörler, taradlar arasında belli işlemler yaparak yeni sonuçlar ürettiren sembollü araçlardır.
+
+
+        //aritmetik operatörler: + - * / %
+        yaz("test");
+        yaz(4 + 4);
+        //string concatenation
+        yaz("4"+4) //bunun ekrarna 44 yazdırması yanında string türünde olduğundan tırnaksız yazılan da stringe döner toplama işleminde
+        let İspat="4"+4;
+        yaz(typeof İspat);
+        //type of operatörü sağındaki verinin türünü string olarak döndürür.
+
+        //çarpma işlemi
+        yaz(3*4);
+        //çarpma işlemi taraflarında sayı ister string varsa önce sayıya dönüşütürülür.
+        yaz("2"*"2");
+
+        // () parantez operatörü metotları fonksiyonları (call) yapar.
+        ciz();
+
+        // .(nokta) operatörü bir nesnenin üyelerine(method / property) erişmeyi sağlar.
+        //document.title
+         
+        yaz(document.title); // burada erişşitik
+       document.title="adana kebap+kola+magnolya" // burADA ise güncelledik
+
+       // bir değişkenin içindeki değere ekleme yapma kısayolu
+       let a =3;
+       //a=a+4; //a'ya 4 ekleyip a ya eşitle
+       a+=4; //a=a+4 muadil
+       yaz(a);
+       let s1=2;
+       s1*=s1; // burda şair diyorki s1= s1*s1 demek
+       yaz(s1);
+
+
+       let s2=2+3*4;
+       yaz(s2);
+       let s3=(2+3)*4;
+       yaz(s3);
+
+       let s4="falanca"+4+3;
+       yaz(s4);
+
+       let s5 = 4+3+ "falancc"; // string birleştirme sağdakiine yapar
+       yaz(s5);
+
+       let s6 = "djfla"+4*3;
+       yaz(s6);
+
+
+       let s7 = ("5"+4)*3;
+       yaz(s7  );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::after,
+        *::before
+        {
+         
+            box-sizing: border-box;
+            
+        }
+        body{
+            margin: 0;
+            background-color: #f1f1f1;
+            font-family: "Lato", sans-serif; 
+                      
+        }
+
+        mark{
+
+            background-color: black;
+            color: white;
+            padding: .2rem .5rem;
+            }
+header{
+    padding: 2rem;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+header>h1{
+margin-top: 0;
+text-transform: uppercase;
+}
+main{
+
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    }
+
+.col1{    
+    flex: 2;/*col1in ne kadar yer kaplayacağı beliliyor*/
+    margin: 0 1rem;   
+    min-width: 400px; /* gerçek çözüm bu mu  bilmiyorum    */
+
+    }
+ .col2{
+    position:static;
+    flex: 1;
+    margin:0 1rem;
+    min-width: 400px; /* gerçek çözüm bu mu  bilmiyorum    */
+  
+}
+.but1{
+    
+        padding: 12px 24px !important;
+        margin-bottom: 10px;
+        background-color:#fff;
+        border:1px solid #ccc ;
+        color: black;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    .but1:hover{
+        background-color: #ccc;
+    }
+.metin1{
+    padding: 0.01em 16px;
+}
+.tarih{
+    color: grey;
+    font-style: italic;
+} 
+
+.box{
+    
+    background-color: white;
+    margin-bottom: 2rem;
+    min-height: 150px;/*sil*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+ 
+ div .x {padding:1rem;
+    border: solid #f1f1f1;
+   border-bottom: 0.8px;
+   border-left: 0;
+ 
+   
+
+}
+.metin2 img{
+    float: left;  
+   
+}
+.baslık{
+    background-color: #f1f1f1;
+    padding:24px;   
+    color: black;
+    font-weight:bold;
+    margin: 0px;
+    font-size: 20px;
+ }
+.x:hover{
+background-color: #ccc;
+}
+
+.P1{
+    font-size: large;
+    line-height:0%; 
+}
+.box .flex-container{
+    padding: 8px 16px !important;
+}
+.flex-container > div {
+  background-color: rgb(241, 241, 241);
+  margin-bottom: 16px !important;
+  font-size: 12px;   
+  display: inline-block; /*yan yana duruyorlar*/
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;  
+  line-height: 18px;;  
+}
+.buyukkutu{
+    font-size: 15px!important ; 
+    background-color: black!important;
+    color: white!important;
+    line-height: 22.5px !important;
+}
+
+
+
+footer{
+    min-height: 80px; /*sil*/
+    background-color: #616161;
+    margin-top: 1rem;
+    color: #fff !important;
+    padding-top: 32px;
+   padding-bottom: 32px;
+   padding-left: 16px;
+   
+   /*footer da genişlik ayarı yapamadım olmadı
+   farklı telefonlardan açınca boyutlandırma yapamadım 
+   */
+
+}
+@media (max-width: 600px) {
+            main {
+                flex-direction: column;
+               
+            }
+        }
+   
+        .yorumbolumu{
+            float: right;
+        }
+.yorum1, .yorum2{
+    background-color: #000;
+    color: #fff;
+    display:inline-block;    padding-left: 8px;
+    padding-right: 8px;
+    text-align:center;
+    line-height: 25px;
+    
+    
+    }
+
+   .yorum2{
+    border-radius: 50%;
+   } 
+
+        h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 10px 0;    
+        }
+
+        .but2{
+            cursor: not-allowed;
+            opacity: 0.3;
+            padding: 12px 24px !important;
+            margin-bottom: 16px;  
+            color: white;         
+            }
+
+        .but3{
+            cursor: pointer;
+          
+            padding: 12px 24px !important;
+            margin-bottom: 16px;
+            }
+        .but2,.but3{
+            border: none;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            background-color: black;
+          }
+          a{
+            background-color: transparent;
+            cursor: pointer;
+            text-decoration: underline;
+            color: white;
+          }
+        
+    </style>
+</head>
+
+
+<body>
+    <header>
+      <h1>My Blog</h1>
+      <div class="site-desc">
+Welcome to the blog of <mark>unknown</mark>
+      </div>
+    </header>
+    <main> 
+
+<div class="col1">
+    <div class="box">
+    <img src="resim1.jpg" style="width: 100%;" alt="günbatımı">
+    <h3 class="metin1">TITLE HEADING</h3>
+   <h5 class="metin1">Title description, <span class="tarih"> April 7,2014</span> </h5>
+   
+   <div class="metin1">
+    <p >Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <button class="but1">READ MORE>></button>
+    <span class="yorumbolumu">
+        <b >Comments</b>
+        <span class="yorum1">0</span>
+    </span>
+   </div> 
+  
+</div>
+    <div class="box">
+    <img src="resim2.jpg" style="width: 100%;" alt="blog">
+    <div class="metin1">
+<h3>BLOG ENTRY</h3>
+    <h3></h3>
+    <h5>Title description, <span class="tarih">April 2,2014</span></h5>
+    <div>
+        <p> Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <button class="but1">READ MORE>></button>
+        <span class="yorumbolumu">
+            <b >Comments</b>
+            <span class="yorum2">2</span>
+        </span>
+    </div>
+
+
+</div>
+
+</div>
+</div>
+<div class="col2">
+    <div class="box">
+        <img src="resim3.jpg" style="width: 100%;" alt="girl">
+         <div class="metin1">
+        <h3>My Name</h3>
+        <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+   </div>
+   <div class="box">
+    <div><h3 class="baslık">Popular Posts</h3></div>
+    <div class="metin2">        
+        <div class="x">
+            <img src="görsel1.jpg" style="width: 60px;">
+            <p class="P1">Lorem</p>
+            <p >Sed mattis nunc</p>
+        </div>
+        <div class="x">
+            <img src="görsel2.jpg" style="width: 60px;">
+            <p class="P1">Ipsum</p>
+            <p >Praes tinci sed</p>
+        </div>
+        <div class="x">
+            <img src="görsel3.jpg" style="width: 60px;">
+            <p class="P1" >Dorum</p>
+            <p>Ultricies congue</p>
+        </div>
+        <div class="x">
+            <img src="görsel4.jpg" style="width: 60px;">
+            <p class="P1">Mingsum</p>
+            <p >Lorem ipsum dipsum</p>            
+        </div>
+    </div>
+    
+   </div>
+   <div class="box">
+    <h4 class="baslık">Tags</h4>
+    <div class="flex-container">
+        <div class="buyukkutu">Travel</div>
+        <div>New York</div>
+        <div>London</div>
+        <div>IKEA</div>
+        <div>NORWAY</div>
+        <div>DIY</div>
+        <div>Ideas</div>
+        <div>Baby</div>
+        <div>Family</div>
+        <div>News</div>
+        <div>Clothing</div>
+        <div>Shopping</div>
+        <div>Sports</div>
+        <div>Games</div>
+    </div>
+
+
+
+   </div>
+
+</div>
+    </main>
+    <footer class="sonbolum">
+        <button class="but2">Previous</button>
+        <button class="but3">Next >></button>
+    <p>Powered by 
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    </p>       
+    </footer>
+</body>
+</html>
