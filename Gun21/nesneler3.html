@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Hesabı</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-4">Dikdörtgen Alanı</h1>
+        <div class="mb-3"> <!--mb 3 ile marjin verdik mb4 mb5 vs de yapabilirdin bu bootstrapde özelliği-->
+            <label class="form-label" for="gen">Genişlik</label>
+            <input class="form-control" type="number" id="gen" value="0">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="yuk">Genişlik</label>
+            <input class="form-control" type="number" id="yuk" value="0">
+        </div>
+
+        <div class="alert alert-info">
+            Özellikleri girilen diktörtgenin alanı:
+            <strong>
+                <span id="sonuc">0</span>br2
+            </strong>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        //önce tezgaha malzeleri dökelim
+        const inputGen = document.getElementById("gen"); //const u bir yerde tanımladıysan başka yerde değiştiremezsin
+        const inputYuk = document.getElementById("yuk");
+        const spnSonuc = document.getElementById("sonuc");
+
+        //veri nesnemizi oluşturalım
+        let dikdörtgen = {
+            genişlik: 0,
+            yukseklik: 0,
+            alan: function () {
+                return this.genişlik * this.yukseklik;
+
+                //nesnenin fonksiyonlarına metot denir alan da metottur
+            }
+
+        }
+        //ihtiyaç duyacağımız fonksiyonları tanımlayalım
+        function sonucuGuncelle(){
+            dikdörtgen.genişlik=inputGen.value;
+            
+            dikdörtgen.yukseklik=inputYuk.value;
+            spnSonuc.textContent=dikdörtgen.alan();
+
+        }
+
+        // event tanımlaması:ne değişince ne olsun?
+        inputGen.oninput = sonucuGuncelle;
+        inputYuk.oninput = sonucuGuncelle;
+    </script>
+</body>
+
+</html>

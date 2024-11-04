@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler</title>
+    
+</head>
+<body>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+let apartman =["betül", "güneş", "metin", "burak"];
+
+ciz("apartmandaki kat sayısı:" + apartman.length);
+ciz("dizi elemanları:" + apartman.toString());
+
+//ek bilgi :artı operatörünün sağında veya solunda string varsa sonucu string yapar
+
+//diziye eleman ekliyoruz:canap push ile
+apart.push("canap");
+ciz("canap eklendi: <br>" + apartman);
+
+//dizinin belirli bir sıradaki elemanına erişme
+ciz("dizinin 3 nolu indeksindeki eleman: <br>" + apartman[3]);
+
+
+// 1. indekse "mahmut" strimgini koy
+apartman[1] ="mahmut";
+
+
+ciz("apartmanın  1. indeksine mahmut taşındı:<br>"+ apartman);
+
+
+// bir dizinin başına eleman ekleme
+apartman.unshift("altuğ");
+ciz("dizinin başına altuğ eklendi:<br>" + apartman);
+
+//hem alır hem siler
+let ilki=apartman.shift();
+yaz("silinen:" +ilki)
+ciz("dizinin ilk elemanını sildik:<br>" + apartman);
+  
+//pop sondakini döndürür ve diziden siler 
+let sonu = apartman.pop();
+yaz("silinen" +sonu)
+ciz("dizinin son elemanını sildik: <br>" + apartman);
+
+//diizinin 1. elemantinden 1 elemanı sil demek 
+//apartman.splice(1,1);
+//diziinin 2. indeksindeki 1 adet elemanı sil
+apartman.splice(2,1);
+// paarntezin ikinci kısmı kaç adet eleman sileneccek onu belirtir
+ciz(apartman);
+
+yaz("2. indeksine sezai elemanını koy:");
+apartman.splice(2,0, "sezai");
+ciz(apartman);
+/*
+    Bu ders saatinde neler yaptık:
+    1. dizi tanımladık
+    2. elemanlarına eriştik (indeks no ile)
+    3. eleman güncelledik (indeks no ile)
+    4. başa, sona ve araya yeni öğe ekledik
+    5. baştan, sondan ve aradan öğe sildik
+*/
+
+    </script>
+</body>
+</html>
