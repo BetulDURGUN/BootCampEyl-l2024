@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Genel sayfa düzeni ve GitHub benzeri tema */
+        h1 {
+color: #58a6ff;
+font-size: 1.8rem;
+margin-bottom: 1.2rem;
+}
+
+/* Textarea alanı */
+textarea {
+resize: none;
+width: 80%;
+max-width: 600px;
+background-color: #161b22;
+color: #c9d1d9;
+border: 1px solid #30363d;
+border-radius: 6px;
+padding: 1rem;
+font-size: 1rem;
+line-height: 1.5;
+resize: vertical;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+transition: border-color 0.3s;
+}
+
+textarea:focus {
+outline: none;
+border-color: #58a6ff;
+box-shadow: 0 4px 12px rgba(88, 166, 255, 0.4);
+}
+
+/* Textarea Hover ve Focus efekti */
+textarea:hover {
+border-color: #58a6ff;
+}
+        body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        }
+        
+        h1 {
+        color: #58a6ff;
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        }
+        
+        /* Definition List (dl, dt, dd) düzeni */
+        dl {
+        width: 80%;
+        max-width: 600px;
+        background-color: #161b22;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border: 1px solid #30363d;
+        }
+        
+        dt {
+        font-weight: bold;
+        color: #c9d1d9;
+        font-size: 1rem;
+        margin-top: 1rem;
+        text-transform: capitalize;
+        }
+        
+        dd {
+        font-size: 0.95rem;
+        color: #8b949e;
+        margin: 0 0 1rem 0;
+        padding-left: 1rem;
+        line-height: 1.6;
+        border-left: 3px solid #30363d;
+       
+        }
+        
+        /* Hover efekti ve geçiş */
+        dl:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+        }
+        
+        /* Link stiline benzer efekt */
+        dt::before {
+        content: "• ";
+        color: #58a6ff;
+        }
+        
+        </style>
+</head>
+<body>
+    <h1>Şiir</h1>
+    <textarea  id="siir" rows="5" cols="40"></textarea>
+
+    <h2>Futbolcu Bilgileri    </h2>
+    <dl id="bilgi"></dl>
+    <script>
+        const dl =document.getElementById("bilgi");
+
+        fetch("ronaldo.json")
+        .then(res => res.json())  //ronaldo jsonunu çevir tek tek propertylerini oku
+        .then(player =>{
+            for (const key in player)
+        {
+            dl.innerHTML += "<dt>" + ddBicimle(key) +"</dt>";
+            dl.innerHTML += "<dd>" + player[key] +"</dd>";
+        }
+           
+           //buraya sadece data.gols dersen ronaldonun gol sayısını görürsün consoleda
+           //diğer seçenek for ( var key in data)
+          // {
+            //console.log(key + "=>" + data[key])
+           //}
+        })
+
+        const txt = document.getElementById("siir");
+
+        fetch("şiir.txt")
+        .then(cevap=>cevap.text())
+        .then(metin=>{
+            //metne dönüştüğünde..
+            txt.value = metin;
+        })
+        //fetch yakala getir demek
+        //asenkron işlem normal sayfadaki  işler devam ederken bu ayrı çalışır.
+
+        function ddBicimle(anahtar)
+        {
+        return anahtar.split("_").join;
+        }
+    </script>
+    
+</body>
+
+</html>
